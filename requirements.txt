@@ -1,2 +1,7 @@
-aiogram
-python-dotenv
+aiogram==2.19
+asyncio==3.4.3
+asyncpg==0.25.0
+SQLAlchemy==1.3.24
+python-dotenv==0.19.2
+gino==1.0.1
+

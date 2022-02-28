@@ -1,7 +1,12 @@
 from aiogram import Dispatcher
+from utils.db import db_gino
+from loader import db
 
 
 async def on_startup(dispatcher: Dispatcher):
+    await db_gino.on_startup(dispatcher)
+    await db.gino.create_all()
+
     from utils.commands import set_commands
     import middlewares
 
